@@ -7,16 +7,16 @@ Image denoising methods using deep neural networks have achieved a great progres
 <img src="https://github.com/JiangBoCS/APD-Nets/blob/main/The%20framework%20of%20APD-Nets.png"
      alt="Picture displays an error."
      style="zoom:30%"/>
-<center><p>The framework of APD-Nets. APD-Nets includes two main components, \textit{i.e}., encoder with RP block and decoder with SP block. $\bigoplus$ indicates the element-wise addition.</p></center>
+<center><p>The framework of APD-Nets. APD-Nets includes two main components, i.e., encoder with RP block and decoder with SP block.</p></center>
 
 ## Structure of Supplemental Prior (SP).
 <img src="https://github.com/JiangBoCS/APD-Nets/blob/main/The%20structure%20of%20Supplemental%20Prior%20(SP)%20block.png"
      alt="Picture displays an error."
      style="zoom:30%"/>
-<center><p>The structure of Supplemental Prior (SP) block. The SP block includes External Reconstruction Extent (ERE), Semantic Channel Attention (SCA) branch (I), and Semantic Spatial Attention (SSA) branch (II). ``CNR'' stands for the convolutional, Normalization and ReLU layers in series. ``DNR'' represents the deconvolutional, Normalization and ReLU layers in series.  $\bigoplus$ indicates the element-wise addition. $\bigotimes$ indicates the element-wise multiplication.</p></center>
+<center><p>The structure of Supplemental Prior (SP) block. The SP block includes External Reconstruction Extent (ERE), Semantic Channel Attention (SCA) branch (I), and Semantic Spatial Attention (SSA) branch (II). ``CNR'' stands for the convolutional, Normalization and ReLU layers in series. ``DNR'' represents the deconvolutional, Normalization and ReLU layers in series. </p></center>
 
 ## Framework of Regularization Priors (RP).
 <img src="https://github.com/JiangBoCS/APD-Nets/blob/main/The%20framework%20of%20Regularization%20priors%20(RP)%20block.png"
      alt="Picture displays an error."
      style="zoom:30%"/>
-<center><p>The framework of Regularization priors (RP) block. RP block includes External Captured Extent (ECE) and learnable noise sampled from Gaussian and Uniform noise distributions. $B$, $C$, $H$ and $W$ indicate the batch size, channels, height and width, respectively. $\bigoplus$ indicates the element-wise addition. $\bigotimes$ indicates the element-wise multiplication.</p></center>
+<center><p>The framework of Regularization priors (RP) block. RP block includes External Captured Extent (ECE) and learnable noise sampled from Gaussian and Uniform noise distributions.</p></center>
