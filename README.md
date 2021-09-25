@@ -20,3 +20,9 @@ Image denoising methods using deep neural networks have achieved a great progres
      alt="Picture displays an error."
      style="zoom:30%"/>
 <center><p>The framework of Regularization priors (RP) block. RP block includes External Captured Extent (ECE) and learnable noise sampled from Gaussian and Uniform noise distributions.</p></center>
+
+## Examples of Visual Effects on the BSD68 Dataset.
+<img src="https://github.com/JiangBoCS/APD-Nets/blob/main/BSD68%20Visual%20sample%20.png"
+     alt="Picture displays an error."
+     style="zoom:30%"/>
+<center><p>Examples of Visual Effects on the BSD68 Dataset.</p></center>
