@@ -48,7 +48,6 @@ parser.add_argument('--local_skip', action='store_true', default=False, help='lo
 parser.add_argument('--vit_share', action='store_true', default=False, help='share vit module')
 parser.add_argument('--val_ps', type=int, default=128, help='patch size of training sample')
 parser.add_argument('--noiseL', type=float, default =15,  help='image noisy level')
-parser.add_argument('--PNL', type=float, default =0.5,  help='image noisy level')
 
 parser.add_argument('--train_ps', type=int, default=128, help='patch size of training sample')
 args = parser.parse_args()
@@ -85,7 +84,7 @@ with torch.no_grad():
         # inputs = data_test[1].cuda()
         # print(type(data_test[0]))
         shape = (data_test[0].cuda()).shape
-        inputs = torch.cuda.FloatTensor(shape).normal_(mean=0, std=(args.noiseL-args.PNL)/255.) if torch.cuda.is_available() else torch.FloatTensor(shape).normal_(mean=0, std=(args.noiseL-args.PNL)/255.)
+        inputs = torch.cuda.FloatTensor(shape).normal_(mean=0, std=(args.noiseL)/255.) if torch.cuda.is_available() else torch.FloatTensor(shape).normal_(mean=0, std=(args.noiseL)/255.)
         inputs = inputs + data_test[0].cuda()
 
         rgb_noisy, h, w = padding(inputs, factor = 64)
@@ -113,7 +112,6 @@ with torch.no_grad():
 
         if args.save_images:
             utils.save_img(os.path.join(args.result_dir,filenames[0]), img_as_ubyte(rgb_restored))
-            utils.save_img(os.path.join(args.save_in,filenames[0]), img_as_ubyte(in_data))
 #            print(args.result_dir,filenames[0])
 psnr_val_rgb = sum(psnr_val_rgb)/len(test_dataset)
 ssim_val_rgb = sum(ssim_val_rgb)/len(test_dataset)
