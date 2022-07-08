@@ -24,3 +24,4 @@ Image denoising methods using deep neural networks have achieved a great progres
      alt="Picture displays an error."
      style="zoom:30%"/>
 <center><p>Examples of Visual Effects on the BSD68 Dataset.</p></center>
+
